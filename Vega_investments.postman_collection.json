@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "5e343dee-29cb-475d-a18e-6fee0547372f",
+		"name": "Vega_investments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16829375"
+	},
+	"item": [
+		{
+			"name": "submit_llm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n\"questionnaire_id\":\r\n\"5e90134g-4eij-8f0h-2345-659g88g3ge0e\",\r\n\"investor_name\": \"Investor Five\",\r\n\"investor_type\": \"Natural Person\",\r\n\"investor_address\": \"789 Pine Rd, Villagetown, FL 33301, United States\",\r\n\"investment_amount\": 50000,\r\n\"is_accredited_investor\": false,\r\n\"accreditation_details\": \"Does not meet income or net worth requirements.\",\r\n\"source_of_funds_description\": \"Savings.\",\r\n\"tax_id_provided\": true,\r\n\"signature_present\": true,\r\n\"submission_date\": \"2025-05-02\"\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/submit_llm",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"submit_llm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "submit_regex",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n\"questionnaire_id\":\r\n\"5e90134g-4eij-8f0h-2345-659g88g3ge0ef\",\r\n\"investor_name\": \"Investor Five\",\r\n\"investor_type\": \"Natural Person\",\r\n\"investor_address\": \"789 Pine Rd, Villagetown, FL 33301, United States\",\r\n\"investment_amount\": 50000,\r\n\"is_accredited_investor\": false,\r\n\"accreditation_details\": \"Does not meet income or net worth requirements.\",\r\n\"source_of_funds_description\": \"Savings.\",\r\n\"tax_id_provided\": true,\r\n\"signature_present\": true,\r\n\"submission_date\": \"2025-05-02\"\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/submit_regex",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"submit_regex"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_human_input",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "new_input",
+							"value": "Correct",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/addhumaninput/3c78912e-2cgh-6d8f-0123-437e66e1ec8c",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"addhumaninput",
+						"3c78912e-2cgh-6d8f-0123-437e66e1ec8c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_questionnaire",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/questionnaire/3c78912e-2cgh-6d8f-0123-437e66e1ec8c",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"questionnaire",
+						"3c78912e-2cgh-6d8f-0123-437e66e1ec8c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
