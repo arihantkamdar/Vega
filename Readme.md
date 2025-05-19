@@ -91,7 +91,7 @@ Now open http://localhost:8000/docs to test via Swagger UI.
 
 📬 API Endpoints
 
-0. Refer to colletion.json with this repo, it has everything you need to run this.
+0. Refer to collection.json with this repo, it has everything you need to run this.
 
 1. POST /submit_regex
 Rule-based analysis (fast, brittle)
