@@ -95,9 +95,11 @@ Now open http://localhost:8000/docs to test via Swagger UI.
 
 1. POST /submit_regex
 Rule-based analysis (fast, brittle)
+![image](https://github.com/user-attachments/assets/a6727da2-c83f-4927-ad5f-37887d2bef45)
 
 2. POST /submit_llm
 NLP-based classification (slower, robust)
+![image](https://github.com/user-attachments/assets/ed557252-04c4-4469-b8e8-9cb1319a51ae)
 
 Payload (for both):
 ```json
@@ -119,6 +121,9 @@ Payload (for both):
 
 3. GET /get_questionnaire/<id>
 Retrieve stored questionnaire + decision.
+![image](https://github.com/user-attachments/assets/9f294c9c-803e-47ab-888a-840436eff381)
+
+
 
 4. POST /addhumaninput/<id>
 Add manual feedback. Body:
