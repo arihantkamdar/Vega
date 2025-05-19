@@ -65,7 +65,7 @@ A **FastAPI-based backend** that uses **NLP + domain rules** to validate and ana
 
 ```bash
 # 1. Clone repo and move in
-git clone <repo-url>
+git clone https://github.com/arihantkamdar/Vega.git
 cd questionnaire-nlp-validator
 
 # 2. Create virtual environment
@@ -96,7 +96,7 @@ NLP-based classification (slower, robust)
 
 Payload (for both):
 ```json
-{
+[{
   "questionnaire_id": "abc123",
   "investor_name": "Jane Doe",
   "investor_type": "Natural Person",
@@ -108,13 +108,14 @@ Payload (for both):
   "tax_id_provided": true,
   "signature_present": true,
   "submission_date": "2025-05-19"
-}
+},
+{...}]
 ```
 
-3. GET /get_questionnaire?questionnaire_id=<id>
+3. GET /get_questionnaire/<id>
 Retrieve stored questionnaire + decision.
 
-4. POST /addhumaninput?questionnaire_id=<id>
+4. POST /addhumaninput/<id>
 Add manual feedback. Body:
 
 ```json
@@ -122,6 +123,7 @@ Add manual feedback. Body:
   "new_input": "Manually reviewed, flagged for further KYC check"
 }
 ```
+![image](https://github.com/user-attachments/assets/ae0056ea-6249-406c-b384-cc583e79efc7)
 
 ## System Design: 
 
