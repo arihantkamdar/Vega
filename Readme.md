@@ -153,6 +153,7 @@ Pretty Simple: i used fast apis as not one likes to run code on terminal espcial
 5. We could also use Deep RL to learn about How ambiguity text drifts (example 12-20 years ago crypto was not even a thing, not its the most secure way to send modey around black market without govt knowing leading to ambiguious source of income).
 6. My database design is not optimal so might want to fix that.
 7.  Also if we are processing multiple questionnaie in one go like [{..},{..}....], if one of them fails the API response breaks.
+8.  ## Ofcource: I didnt use good coding conventions
 
 
 ## 🚧 Assumptions
