@@ -1,0 +1,8 @@
+[
+    {
+        "questionnaire_id": "5e90134g-4eij-8f0h-2345-659g88g3ge0e",
+        "decision": "Escalate",
+        "missing_fields": "",
+        "escalation_reason": "is_accredited_investor is False , Accreditations are ambiguious or suspicious , "
+    }
+]

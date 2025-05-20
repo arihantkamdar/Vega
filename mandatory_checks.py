@@ -107,6 +107,8 @@ def basic_checks(data: Questionnaire):
 
 
 def check_text_data(data: Questionnaire):
+    """
+    Uses Regex to find certain keywords in text, if present it marks as ambiguity"""
     escaltion_flag = False
     escaltion_details = []
     acrredatitaions_patterns = re.compile(
@@ -174,7 +176,9 @@ def check_text_data(data: Questionnaire):
 
 
 def check_text_data_llm(acc_text, fund_text):
-    # text = data.source_of_funds_description
+    """
+    Uses LLMs to check for ambiguity in text fields
+    """
     escaltion_flag = False
     escaltion_details = []
     labels_for_accreditation = ["valid accreditation of investor", "ambiguious accreditation", "not valid accreditation details"]
@@ -197,12 +201,12 @@ def check_text_data_llm(acc_text, fund_text):
     }
     
     
-test_data = Questionnaire(questionnaire_id= "1a59843c-9ade-4b6d-8961-215c44c9ca6a", investor_name = "Mr and Mrs Simpson",
-                        investor_type = "Joint Tenants", investor_address = "25, Springfield, New Jersey, United States",
-                        investment_amount = 250000, is_accredited_investor = True,
-                        accreditation_details = "Joint Income over $300k for past two years with expectation to continue.",
-                        source_of_funds_description = "Various sources including bblack market.",
-                        tax_id_provided = True, signature_present = True, submission_date = "2025-04-30")
+# test_data = Questionnaire(questionnaire_id= "1a59843c-9ade-4b6d-8961-215c44c9ca6a", investor_name = "Mr and Mrs Simpson",
+#                         investor_type = "Joint Tenants", investor_address = "25, Springfield, New Jersey, United States",
+#                         investment_amount = 250000, is_accredited_investor = True,
+#                         accreditation_details = "Joint Income over $300k for past two years with expectation to continue.",
+#                         source_of_funds_description = "Various sources including bblack market.",
+#                         tax_id_provided = True, signature_present = True, submission_date = "2025-04-30")
 
 # print(basic_checks(test_data))
 # print(check_text_data(test_data))

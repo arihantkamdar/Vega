@@ -1,0 +1,14 @@
+[{
+"questionnaire_id":
+"3c78912e-2cgh-6d8f-0123-437e66e1ec8c",
+"investor_name": "Investor Three",
+"investor_type": "Natural Person",
+"investor_address": "456 Oak Ave, Sometown, TX 75001, United States",
+"investment_amount": 750000,
+"is_accredited_investor": true,
+"accreditation_details": "Holds Series 7, 65 licenses in good standing.",
+"source_of_funds_description": "Various sources including family contributions.",
+"tax_id_provided": true,
+"signature_present": true,
+"submission_date": "2025-05-01"
+}]

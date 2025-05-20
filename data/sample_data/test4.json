@@ -1,0 +1,16 @@
+[
+{
+"questionnaire_id":
+"4d89023f-3dhi-7e9g-1234-548f77f2fd9d",
+"investor_name": "Investor Four Trust",
+"investor_type": "Trust",
+"investor_address": null,
+"investment_amount": 100000,
+"is_accredited_investor": true,
+"accreditation_details": "Trust with total assets over $5M, directed by sophisticated person.",
+"source_of_funds_description": "Investment portfolio.",
+"tax_id_provided": true,
+"signature_present": false,
+"submission_date": "2025-05-02"
+}
+]

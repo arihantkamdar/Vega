@@ -12,6 +12,8 @@ app = FastAPI()
 db = SessionLocal()
 
 def get_db():
+    """
+    gets a bd session for FAST API"""
     db = SessionLocal()
     try:
         yield db
@@ -25,11 +27,15 @@ Base.metadata.create_all(bind=engine)
 
 @app.post("/submit_regex")
 async def submit_questionnaire_regex(request_data: list[Questionnaire]):
+    """
+    Uses Regex for checking ambiguity in text fields
+    """
     response = []
     for data in request_data:
         questionnaire_id = data.questionnaire_id
         questionnaire_db = db.query(QuestionnaireDB).filter_by(questionnaire_id=questionnaire_id).first()
         if questionnaire_db is not None:
+            # if db already has a questioner with ID
             return {"msg" : f"Questionnaire ID {questionnaire_id} exist already"}
 
         resp = runner(data, regex= True) 
@@ -43,11 +49,15 @@ async def submit_questionnaire_regex(request_data: list[Questionnaire]):
 
 @app.post("/submit_llm")
 async def submit_questionnaire_llm(request_data: list[Questionnaire]):
+    """
+    Uses LLM for checking ambiguity in text fields
+    """
     response = []
     for data in request_data:
         questionnaire_id = data.questionnaire_id
         questionnaire_db = db.query(QuestionnaireDB).filter_by(questionnaire_id=questionnaire_id).first()
         if questionnaire_db is not None:
+            # if questionnair is already present
             return {"msg" : f"Questionnaire ID {questionnaire_id} exist already"}
         resp = runner(data, regex= False) 
         response.append(resp)
@@ -60,6 +70,9 @@ async def submit_questionnaire_llm(request_data: list[Questionnaire]):
 
 @app.get("/questionnaire/{questionnaire_id}")
 async def get_questionnaire(questionnaire_id: str, db: Session = Depends(get_db)):
+    """
+    Fetch already processed questionnairs from db
+    """
     questionnaire = db.query(QuestionnaireDB).filter_by(questionnaire_id=questionnaire_id).first()
     decision = db.query(QuestionnaireDecisionDB).filter_by(questionnaire_id=questionnaire_id).first()
 
@@ -75,6 +88,8 @@ async def get_questionnaire(questionnaire_id: str, db: Session = Depends(get_db)
 
 @app.post("/addhumaninput/{questionnaire_id}")
 async def update_human_input_form(questionnaire_id: str, new_input: str = Form(...), db: Session = Depends(get_db)):
+    """
+    Adds into human input field in db for decision"""
     decision_row = db.query(QuestionnaireDecisionDB).filter_by(questionnaire_id=questionnaire_id).first()
     if not decision_row:
         raise HTTPException(status_code=404, detail="Decision not found")

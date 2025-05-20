@@ -1,0 +1,14 @@
+[{
+"questionnaire_id":
+"1a59843c-9ade-4b6d-8961-215c44c9ca6a",
+"investor_name": "Mr and Mrs Simpson",
+"investor_type": "Joint Tenants",
+"investor_address": "25, Springfield, New Jersey, United States",
+"investment_amount": 250000,
+"is_accredited_investor": true,
+"accreditation_details": "Joint Income over $300k for past two years with expectation to continue.",
+"source_of_funds_description": "Personal savings and employment income.",
+"tax_id_provided": true,
+"signature_present": true,
+"submission_date": "2025-04-30"
+}]

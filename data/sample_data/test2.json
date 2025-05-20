@@ -1,0 +1,14 @@
+[{
+"questionnaire_id":
+"2b67890d-1bfg-5c7e-9012-326d55d0db7b",
+"investor_name": "Example Corp.",
+"investor_type": "Entity",
+"investor_address": "123 Main St, Anytown, CA 90210, United States",
+"investment_amount": null,
+"is_accredited_investor": true,
+"accreditation_details": "Entity with total assets in excess of $5M, not formed for specific purpose.",
+"source_of_funds_description": "Sale of previous business.",
+"tax_id_provided": false,
+"signature_present": true,
+"submission_date": "2025-05-01"
+}]
